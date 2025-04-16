@@ -1,0 +1,42 @@
+{
+  "name": "web-mcp",
+  "version": "1.0.0",
+  "main": "build/web-mcp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && chmod 755 build/web-mcp.js",
+    "start": "node build/web-mcp.js",
+    "dev": "tsc --watch & nodemon build/web-mcp.js"
+  },
+  "keywords": [
+    "mcp",
+    "gemini",
+    "subsidy",
+    "assistant"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "description": "Webサイトのデータを取得し、マークダウンでまとめ記事を作成するMCPサーバー",
+  "dependencies": {
+    "@google/generative-ai": "^0.2.0",
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2",
+    "sitemcp": "^0.3.3",
+    "uuid": "^11.1.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.1",
+    "@types/uuid": "^10.0.0",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
